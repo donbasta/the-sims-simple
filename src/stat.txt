@@ -1,0 +1,3 @@
+Hygiene : 20
+Energy : 20
+Fun : 20
