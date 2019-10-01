@@ -10,21 +10,14 @@ public class Driver{
     }
     
     public static void padding(){
-        int i;
-        String S = "";
-        for (i=0;i<100;i++) S+="-";
-        System.out.printf("%n%s%n%s%n%n", S, S);
+        /* fungsi : Memberikan pembatas antara header dan isi menu
+        */
     }
 
     public static void Menu(){
-        header();
-        padding();
-        System.out.println("   MAIN MENU:");
-        System.out.println();
-        System.out.println("1. New Game");
-        System.out.println("2. Keluar");
-        System.out.println();
-        inputMenu();
+        /* Menampilkan header, padding, dan isi menu.
+            memanggil prosedur 
+        */
     }
 
     public static void inputMenu(){
@@ -66,7 +59,6 @@ public class Driver{
         while(loop){
             aksi = inputActivity();
             Game.beraksi(aksi);
-            System.out.println();
             loop = Game.finishStatus();
             if(Game.isMenang()) System.out.println("Dah menang ya? Emg ez sih. Bye!");
             if(Game.isKalah()) System.out.println("CCD lah , gini doang kalah. bye!");
