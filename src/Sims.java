@@ -63,8 +63,8 @@ public class Sims {
                 break;
 
             case "Minum Air" :
-                if(this.energy>=5){
-                    this.energy -= 5;
+                if(this.hygiene>=5){
+                    this.hygiene -= 5;
                     this.printStatus();
                 } else {
                     System.out.println("Aksi tidak valid");
@@ -75,6 +75,7 @@ public class Sims {
                 if(this.energy<=10 && this.hygiene>=10){
                     this.energy += 5;
                     this.hygiene -= 10;
+                    this.printStatus();
                 } else {
                     System.out.println("Aksi tidak valid");
                 }
@@ -84,6 +85,7 @@ public class Sims {
                 if(this.energy<=5 && this.hygiene>=5){
                     this.energy += 10;
                     this.hygiene -= 5;
+                    this.printStatus();
                 } else {
                     System.out.println("Aksi tidak valid");
                 }

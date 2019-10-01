@@ -1,68 +1,44 @@
 import java.util.Scanner;
 
 public class Driver{
-    public static Scanner input = new Scanner(System.in);
-    public static boolean loop;
-    public static int[] inputvar = new int[20];
+    public static Scanner input = new Scanner(System.in); // deklarasi class yang berfungsi untuk menginput program.
+    public static boolean loop; // var untuk menyimpan status looping program. 
+    public static int[] inputvar = new int[20]; // array dimana menyimpan hasil inputan pengguna.
 
     public static void header(){
-
+        /* fungsi : Menampilkan header/kop untuk memperindah tampilan dan memperjelas maksud program.
+        */
     }
     
     public static void padding(){
-        /* fungsi : Memberikan pembatas antara header dan isi menu
+        /* fungsi : Memberikan pembatas antara header dan isi menu.
         */
     }
 
     public static void Menu(){
-        /* Menampilkan header, padding, dan isi menu.
-            memanggil prosedur 
+        /* fungsi : Menampilkan header, padding, dan isi menu,
+           serta memanggil prosedur inputMenu
         */
     }
 
     public static void inputMenu(){
-        inputting(1, "memilih menu");
-        switch(inputvar[1]){
-            case 1:
-                loop = true;
-                break;
-            case 2:
-                System.out.println("Goodbye sampai jumpa lain waktu!!");
-                loop = false;
-                break;
-            default:
-                System.out.println("Input salah, coba lagi");
-                inputMenu();
-                break;
-        }
+        /* fungsi : Prosedur untuk memanggil prosedur inputting, lalu menentukan pilihan berdasar opsi yang dipilih.
+            Jika salah, maka akan menginput ulang pilihan.
+        */
     }
 
     public static void inputting(int i, String A){
-        String s = "Masukan input untuk " + A + " : ";
-        System.out.print(s);
-        inputvar[i] = input.nextInt();
-        input.nextLine();
+        /* fungsi : Prosedur untuk menginput pilihan menu yang berupa integer.
+        */
     }
 
     public static String inputActivity(){
-        System.out.print("Masukkan aktivitas yang ingin dijalankan: ");
-        String s;
-        s = input.nextLine();
-        return s;
+        /* fungsi : Prosedur untuk menginput pilihan aktivitas yang ingin dilakukan dalam game.
+        */
     }
 
     public static void main(String[] args){
-        loop = true;
-        String aksi;
-        Sims Game = new Sims();
-        Menu();
-        while(loop){
-            aksi = inputActivity();
-            Game.beraksi(aksi);
-            loop = Game.finishStatus();
-            if(Game.isMenang()) System.out.println("Dah menang ya? Emg ez sih. Bye!");
-            if(Game.isKalah()) System.out.println("CCD lah , gini doang kalah. bye!");
-            if (!loop) Menu();
-        }
+        /* fungsi : Main program dimana program dijalankan berdasar sequence pemanggilan fungsi dan class lain.
+        */
     }
 }
