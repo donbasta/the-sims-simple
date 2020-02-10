@@ -1,3 +1,5 @@
-# The-Sims-TBFO
-File tugas besar mata kuliah Teori Bahasa Formal dan Otomata
+# the-sims-simple
+
+This repo contains a very simplistic The Sims Game used to simulate how finite state automata works by using the sim's status as the state. The program is written in Java language, and is completed to fulfill the task given in course IF2124 (Teori Bahasa Formal dan Otomata/Formal Language and Automata Theory) at Institut Teknologi Bandung.
+
 
